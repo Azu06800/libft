@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nhamdan <nhamdan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/28 08:50:18 by nhamdan           #+#    #+#             */
-/*   Updated: 2021/12/09 12:42:47 by nhamdan          ###   ########.fr       */
+/*   Created: 2021/12/09 13:28:19 by nhamdan           #+#    #+#             */
+/*   Updated: 2021/12/13 18:34:25 by nhamdan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
+	size_t	ls1;
+	size_t	ls2;
+	size_t	ltot;
+	char	*dst;
 
-	i = 0;
-	while ((unsigned char)s1[i] == (unsigned char)s2[i]
-	&& s1[i] != '\0' && s2[i] != '\0' && i < n - 1)
-		i++;
-	if (n > 0)
-		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-	else
-		return (0);
+	if (!s1 || !s2)
+		return NULL;
+	ls1 = ft_strlen(s1);
+	ls2 = ft_strlen(s2);
+	ltot = ls1 + ls2 + 1;
+	dst = malloc(sizeof(char) * ltot);
+	if (!dst)
+		return (NULL);
+	ft_memmove(dst, s1, ls1);
+	ft_memmove(dst + ls1, s2, ls2);
+	dst[ltot - 1] = '\0';
+	return (dst);
 }
