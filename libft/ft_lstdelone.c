@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nhamdan <nhamdan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/28 08:38:35 by nhamdan           #+#    #+#             */
-/*   Updated: 2021/12/13 13:29:02 by nhamdan          ###   ########.fr       */
+/*   Created: 2021/12/14 19:10:01 by nhamdan           #+#    #+#             */
+/*   Updated: 2021/12/14 19:10:21 by nhamdan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	int	i;
-
-	if (!s)
-		return (NULL);
-	i = ft_strlen(s);
-	while (i >= 0)
-	{
-		if (s[i] == (const char) c)
-			return ((char *) s + i);
-		i--;
-	}
-	return (NULL);
+	if (!lst || !del)
+		return ;
+	(del)(lst->content);
+	free(lst);
 }

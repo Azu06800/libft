@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nhamdan <nhamdan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/28 08:38:35 by nhamdan           #+#    #+#             */
-/*   Updated: 2021/12/13 13:29:02 by nhamdan          ###   ########.fr       */
+/*   Created: 2021/11/28 09:33:12 by nhamdan           #+#    #+#             */
+/*   Updated: 2021/12/06 02:18:21 by nhamdan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strdup(const char *s1)
 {
-	int	i;
+	char	*copy;
 
-	if (!s)
+	copy = (char *)malloc(sizeof(char) * ft_strlen(s1) + 1);
+	if (copy == NULL)
 		return (NULL);
-	i = ft_strlen(s);
-	while (i >= 0)
-	{
-		if (s[i] == (const char) c)
-			return ((char *) s + i);
-		i--;
-	}
-	return (NULL);
+	else
+		ft_memcpy(copy, s1, ft_strlen(s1) + 1);
+	return (copy);
 }
