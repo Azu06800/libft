@@ -6,7 +6,7 @@
 /*   By: nhamdan <nhamdan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 18:35:56 by nhamdan           #+#    #+#             */
-/*   Updated: 2021/12/13 18:40:28 by nhamdan          ###   ########.fr       */
+/*   Updated: 2021/12/20 15:31:34 by nhamdan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putendl_fd(char *s, int fd)
 	int	i;
 
 	if (!s)
-		return;
+		return ;
 	i = 0;
 	while (s[i])
 	{

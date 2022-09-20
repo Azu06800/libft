@@ -6,7 +6,7 @@
 /*   By: nhamdan <nhamdan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 13:28:19 by nhamdan           #+#    #+#             */
-/*   Updated: 2021/12/13 18:34:25 by nhamdan          ###   ########.fr       */
+/*   Updated: 2021/12/20 15:34:05 by nhamdan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*dst;
 
 	if (!s1 || !s2)
-		return NULL;
+		return (NULL);
 	ls1 = ft_strlen(s1);
 	ls2 = ft_strlen(s2);
 	ltot = ls1 + ls2 + 1;

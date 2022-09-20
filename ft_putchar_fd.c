@@ -6,13 +6,13 @@
 /*   By: nhamdan <nhamdan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 16:26:57 by nhamdan           #+#    #+#             */
-/*   Updated: 2021/12/13 18:22:04 by nhamdan          ###   ########.fr       */
+/*   Updated: 2021/12/20 15:30:59 by nhamdan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }

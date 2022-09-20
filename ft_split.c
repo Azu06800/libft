@@ -6,7 +6,7 @@
 /*   By: nhamdan <nhamdan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/12 12:48:12 by nhamdan           #+#    #+#             */
-/*   Updated: 2021/12/13 13:19:33 by nhamdan          ###   ########.fr       */
+/*   Updated: 2021/12/20 15:33:30 by nhamdan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static size_t	cpt_sep(const char *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	int		len;
+	int			len;
 	size_t		i;
 	const char	*start;
 	char		**split;
